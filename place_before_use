@@ -1,0 +1,4 @@
+/etc/tmux.conf
+/etc/compton.conf
+$libdir/urxvt/perl/pasta
+

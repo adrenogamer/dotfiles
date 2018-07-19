@@ -1,0 +1,32 @@
+# for my PalmPC
+set -g status-interval	30
+set -g status-style	"bg=black"
+set -ag status-style	"fg=white"
+set -g status-position	top
+set -g status-right	'#(date +"%a, %d %h")#[fg=white,bold] #(date +"%H:%M") #[default]| #[fg=red]#(busybox cat /proc/loadavg | busybox cut -c 1-4)#[default] | #[fg=green]#(free --mega | grep Mem | cut -c 29-31)Mb#[default] | #(busybox cat /sys/class/power_supply/battery/capacity)% '
+set -g status-right-length 45
+set-option -g status-attr default
+
+set-window-option -g window-status-bg	cyan
+set-window-option -g window-status-current-bg	green
+set-window-option -g window-status-fg	black
+set-window-option -g window-status-current-fg	black
+setw -g window-status-current-format	' #{window_index} '
+setw -g window-status-format		' #{window_index} '
+set -g window-status-separator		''
+setw -g automatic-rename off
+set-option -g allow-rename off
+setw -g mode-keys	vi
+set -g status-keys	vi
+set-option -g renumber-windows	on
+
+set -ga terminal-overrides ',xterm*:XT:smcup@:rmcup@'
+set -g history-limit	2048
+set -s escape-time	0
+
+bind -T prefix "'"	split-window -h
+bind -T prefix '"'	split-window -v
+bind-key -n F2		new-window -c "#{pane_current_path}"
+bind-key -n F3		previous-window
+bind-key -n F4		next-window
+

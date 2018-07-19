@@ -1,0 +1,59 @@
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintshard
+
+URxvt.depth:		    32
+URxvt.geometry:	 	    80x24
+
+# edit if xos4-terminus is used
+URxvt*font:		    xft:Terminus:pixelsize=15:antialias=true
+URxvt.allow_bold:           true
+URxvt*letterSpace: 	    0
+
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+URxvt*saveLines:	    4096
+
+# perl shit
+URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select
+URxvt.keysym.M-u:     perl:url-select:select_next
+
+# edit to lovely browser
+URxvt.url-launcher:   /usr/bin/uzbl-browser
+URxvt.underlineURLs:  True
+URxvt.matcher.button: 1 
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.keysym.Control-Shift-V:     perl:pasta:paste
+URxvt.clipboard.autocopy: true
+
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #ffeeff
+URxvt.cursorUnderline:      true
+
+# transparent bg
+*background: [95]#1A092D
+*foreground: #ffeeff
+
+*cursorColor: #ffeeff
+*pointerColorBackground: #ffeeff
+*pointerColorForeground: #ffeeff
+
+# base16-mellow-purple, 16-color theme
+*color0: #1A092D
+*color8: #1E0528
+*color1: #00D9E9
+*color9: #AA00A3
+*color2: #05CB0D
+*color10: #331354
+*color3: #955AE7
+*color11: #320F55
+*color4: #550068
+*color12: #873582
+*color5: #4D6FFF
+*color13: #8991BB
+*color6: #B900B1
+*color14: #FFEEFF
+*color7: #FFEEFF
+*color15: #F8C0FF

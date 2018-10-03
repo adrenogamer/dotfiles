@@ -1,0 +1,56 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 1
+}
+order += "cpu_usage"
+order += "load"
+order += "wireless wlan0"
+order += "disk /"
+order += "disk /mnt/ada1"
+order += "tztime local"
+order += "volume master"
+
+cpu_usage {
+	format = "cpu: %usage"
+}
+
+wireless wlan0 {
+	format_up = "wlan0: %ip"
+	format_down = "wlan0: down"
+}
+
+wireless _first_ {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
+}
+
+tztime local {
+        format = "%Y.%m.%d %H:%M:%S"
+}
+
+load {
+        format = "load: %1min %5min %15min"
+}
+
+disk "/" {
+        format = "ada0: %avail"
+}
+
+disk "/mnt/ada1" {
+	format = "ada1: %avail"
+}
+
+volume master {
+	format = "vol: %volume"
+	format_muted = " vol: muted"
+	device = "pulse:alsa_output.pci-0000_00_1b.0.analog-stereo"
+}
+	

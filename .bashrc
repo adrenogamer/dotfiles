@@ -90,6 +90,9 @@ alias htc_battery='cat /sys/class/power_supply/battery/capacity'
 alias rxvt='urxvtc'
 alias xterm='urxvtc'
 
+# tmux in utf-8 by default
+alias tmux='tmux -u'
+
 # ssh compatibility mode
 if [ "$SSH_TTY" ]; then
 	TERM=screen

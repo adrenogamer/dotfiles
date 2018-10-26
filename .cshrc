@@ -28,6 +28,8 @@ alias pacman	pacman --color=always
 
 alias htc_battery	cat /sys/class/power_supply/battery/capacity
 
+alias tmux	tmux -u
+
 set path = (/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin $HOME/bin)
 setenv	BLOCKSIZE	K
 
